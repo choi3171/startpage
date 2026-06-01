@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Startpage</title>
+    <style>
+        :root {
+            --bg-color: #1e1e2e;
+            --container-bg: #313244;
+            --text-color: #cdd6f4;
+            --accent-color: #cba6f7;
+            --border-color: #45475a;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Pretendard', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .category {
+            background-color: var(--container-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .category h2 {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .vertical-list li {
+            margin: 0.8rem 0;
+        }
+
+        .horizontal-list {
+            display: flex;
+            gap: 2rem;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.15s ease;
+            display: inline-block;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        
+        <div class="category">
+            <h2>School</h2>
+            <ul class="vertical-list">
+                <li><a href="https://my.snu.ac.kr/">mySNU</a></li>
+                <li><a href="https://etl.snu.ac.kr/">eTL</a></li>
+                <li><a href="https://mail.google.com/">Gmail (School)</a></li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h2>Dev</h2>
+            <ul class="vertical-list">
+                <li><a href="https://github.com/">GitHub</a></li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h2>Music</h2>
+            <ul class="vertical-list">
+                <li><a href="https://soundcloud.com/">SoundCloud</a></li>
+                <li><a href="https://youtube.com/">YouTube (Music)</a></li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h2>Idle</h2>
+            <ul class="vertical-list">
+                <li><a href="https://mail.google.com/">Gmail (Personal)</a></li>
+                <li><a href="https://youtube.com/">YouTube (Idle)</a></li>
+            </ul>
+        </div>
+
+        <div class="category full-width">
+            <h2>AI Tools</h2>
+            <ul class="horizontal-list">
+                <li><a href="https://gemini.google.com/">Gemini</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
